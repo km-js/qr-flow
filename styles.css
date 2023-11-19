@@ -1,0 +1,97 @@
+*{
+padding: 0;
+margin: 0;
+font-family: sans-serif;
+box-sizing: border-box;
+}
+
+.container{
+    background: linear-gradient(45deg, #6495ED, #FFff);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    background: #fff;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.card label{
+font-size: 20px;
+font-weight: 600;
+margin: 20px;
+}
+
+.card input{
+margin: 0 20px;
+padding: 10px;
+border-radius: 8px;
+border: solid 1px gray;
+font-size: 18px;
+
+}
+
+.card button{
+    background: #6495ED;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 40px 20px;
+    outline: 0;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.qr-container{
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+ 
+}
+
+.qr-container img{
+    width: 100%;
+    padding: 10px;
+
+}
+
+.qr-container.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+}
+
+.error{
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
